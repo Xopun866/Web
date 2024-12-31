@@ -1,0 +1,377 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Matrix M - Gaming Equipment
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+    .fade-out {
+        animation: fadeOut 1s forwards;
+    }
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .slide-up {
+        animation: slideUp 1s forwards;
+    }
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .slide-down {
+        animation: slideDown 0.5s forwards;
+    }
+    @keyframes slideDown {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .title-font {
+        font-family: 'Orbitron', sans-serif;
+    }
+    .hero-font {
+        font-family: 'Raleway', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-black text-gray-300">
+  <!-- Loading Screen -->
+  <div class="fixed inset-0 bg-black flex items-center justify-center z-50" id="loading-screen">
+   <h1 class="text-3xl font-bold text-neon-green animate-pulse slide-up title-font">
+    Matrix M
+   </h1>
+  </div>
+  <!-- Main Content -->
+  <div class="hidden" id="main-content">
+   <!-- Header -->
+   <header class="bg-black p-4 flex justify-between items-center fixed w-full top-0 z-50 shadow-lg">
+    <div class="text-2xl font-bold text-neon-green title-font">
+     Matrix M
+    </div>
+    <nav class="space-x-4 hidden md:flex">
+     <a class="hover:text-neon-green" href="#">
+      Gaming PCs
+     </a>
+     <a class="hover:text-neon-green" href="#">
+      Peripherals
+     </a>
+     <a class="hover:text-neon-green" href="#">
+      Monitors
+     </a>
+     <a class="hover:text-neon-green" href="#">
+      Consoles
+     </a>
+     <a class="hover:text-neon-green" href="#">
+      VR/AR
+     </a>
+     <a class="hover:text-neon-green" href="#">
+      Chairs
+     </a>
+    </nav>
+    <div class="space-x-4">
+     <a class="hover:text-neon-green" href="#">
+      <i class="fas fa-shopping-cart">
+      </i>
+     </a>
+     <button class="focus:outline-none md:hidden" id="menu-toggle">
+      <div class="hamburger">
+       <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300">
+       </span>
+       <span class="block w-6 h-0.5 bg-white mb-1 transition-transform duration-300">
+       </span>
+       <span class="block w-6 h-0.5 bg-white transition-transform duration-300">
+       </span>
+      </div>
+     </button>
+    </div>
+   </header>
+   <!-- Mobile Menu -->
+   <div class="bg-black p-4 fixed w-full top-16 z-40 hidden" id="mobile-menu">
+    <nav class="space-y-4">
+     <a class="block hover:text-neon-green" href="#product-categories" onclick="toggleMenu()">
+      Product Categories
+     </a>
+     <a class="block hover:text-neon-green" href="#featured-products" onclick="toggleMenu()">
+      Featured Products
+     </a>
+     <a class="block hover:text-neon-green" href="#subscribe" onclick="toggleMenu()">
+      Subscribe
+     </a>
+     <a class="block hover:text-neon-green" href="#about-us" onclick="toggleMenu()">
+      About Us
+     </a>
+    </nav>
+   </div>
+   <!-- Hero Section -->
+   <section class="relative pt-16 h-96">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+     <source src="video.mp4" type="video/mp4"/>
+     Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center">
+     <h1 class="text-3xl font-bold text-neon-green hero-font">
+      WHERE FUN FUELS FORTUNE
+     </h1>
+     <p class="text-lg text-gray-300 mt-4 hero-font">
+      Our Service is Available Only For Mobile Users
+     </p>
+    </div>
+   </section>
+   <!-- Product Categories -->
+   <section class="py-12" id="product-categories">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold text-center text-neon-green mb-8 title-font">
+      Product Categories
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Category 1 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Full gaming setup with RGB lighting, including a gaming PC, monitor, keyboard, and mouse" class="w-full h-48 object-cover mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/VJKGu53kOybnAVppCLzmE0Bf9Ikj0MvM9QqfS6S2TGPp5XAUA.jpg" width="600"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming PCs and Laptops
+       </h3>
+       <p class="mt-2">
+        Explore our range of powerful gaming PCs and laptops.
+       </p>
+      </div>
+      <!-- Category 2 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Gaming peripherals including mouse, keyboard, and headset" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/2YkPeQHR3YRKMa3uF9OoEt08b57WK2Ix2GGaA71Mx2IZDLAKA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Peripherals
+       </h3>
+       <p class="mt-2">
+        Find the best gaming mice, keyboards, and headsets.
+       </p>
+      </div>
+      <!-- Category 3 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="High-resolution gaming monitor" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/CHLr2NQ1cWYedCI5PxnEnLJh53NJRzFtFdOonqFPfq2uGWAUA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Monitors and Displays
+       </h3>
+       <p class="mt-2">
+        Discover top-notch monitors for an immersive gaming experience.
+       </p>
+      </div>
+      <!-- Category 4 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Gaming console with controllers" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/rRdR3q1FmUotPFAcz5JXFlfH3nlp9rBXHhOfEZmzPD13GWAUA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Console Gaming Equipment
+       </h3>
+       <p class="mt-2">
+        Get the latest consoles and accessories for your gaming needs.
+       </p>
+      </div>
+      <!-- Category 5 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="VR headset and controllers" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/lKxTsHbpWVqPEpBX0lnBDITDxTx6YRYoroqFcWY7T3AshFAF.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        VR/AR Devices
+       </h3>
+       <p class="mt-2">
+        Step into the future with our VR and AR devices.
+       </p>
+      </div>
+      <!-- Category 6 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Ergonomic gaming chair" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/hOJx7lI67FKGPttHsch9PvqNTonQAPV8nj9cmCQvLzfcDLAKA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming Chairs and Accessories
+       </h3>
+       <p class="mt-2">
+        Comfort and style with our range of gaming chairs and accessories.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Featured Products -->
+   <section class="py-12" id="featured-products">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold text-center text-neon-green mb-8 title-font">
+      Featured Products
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Product 1 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="High-end gaming PC with RGB lighting" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/Y42FqgeangysJyhKzOjEUPy28D76GgApSZzQ5CXhLmndDLAKA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming PC
+       </h3>
+       <p class="mt-2">
+        $1,499.99
+       </p>
+       <a class="mt-4 px-4 py-2 bg-neon-green text-black font-bold rounded hover:bg-electric-blue" href="#">
+        Add to Cart
+       </a>
+      </div>
+      <!-- Product 2 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Mechanical gaming keyboard with RGB lighting" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/RnCPH2kMFYJIIlpm8ZA811kliYuugfinehmaUbGQfEHoNsAoA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming Keyboard
+       </h3>
+       <p class="mt-2">
+        $99.99
+       </p>
+       <a class="mt-4 px-4 py-2 bg-neon-green text-black font-bold rounded hover:bg-electric-blue" href="#">
+        Add to Cart
+       </a>
+      </div>
+      <!-- Product 3 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="High-resolution gaming monitor" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/CHLr2NQ1cWYedCI5PxnEnLJh53NJRzFtFdOonqFPfq2uGWAUA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming Monitor
+       </h3>
+       <p class="mt-2">
+        $299.99
+       </p>
+       <a class="mt-4 px-4 py-2 bg-neon-green text-black font-bold rounded hover:bg-electric-blue" href="#">
+        Add to Cart
+       </a>
+      </div>
+      <!-- Product 4 -->
+      <div class="p-6 rounded-lg text-center">
+       <img alt="Ergonomic gaming chair" class="w-full h-48 object-cover mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/hOJx7lI67FKGPttHsch9PvqNTonQAPV8nj9cmCQvLzfcDLAKA.jpg" width="300"/>
+       <h3 class="text-xl font-bold text-neon-green">
+        Gaming Chair
+       </h3>
+       <p class="mt-2">
+        $199.99
+       </p>
+       <a class="mt-4 px-4 py-2 bg-neon-green text-black font-bold rounded hover:bg-electric-blue" href="#">
+        Add to Cart
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Newsletter Subscription -->
+   <section class="py-12" id="subscribe">
+    <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl font-bold text-neon-green mb-4 title-font">
+      Subscribe to our Newsletter
+     </h2>
+     <p class="mb-8">
+      Stay updated with the latest deals and offers
+     </p>
+     <form class="flex flex-col md:flex-row justify-center items-center">
+      <input class="p-2 w-full md:w-1/2 rounded-l-lg bg-gray-900 text-gray-300 mb-4 md:mb-0 md:mr-2" placeholder="Enter your email" type="email"/>
+      <button class="px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-700" type="submit">
+       Subscribe
+      </button>
+     </form>
+    </div>
+   </section>
+   <!-- About Us -->
+   <section class="py-12 bg-gray-900" id="about-us">
+    <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl font-bold text-neon-green mb-4 title-font">
+      About Us
+     </h2>
+     <p class="text-gray-300">
+      We are Matrix M, here we are providing players gaming optimization that increases the performance of players. We are here to save you, Neo!!!
+     </p>
+    </div>
+   </section>
+   <!-- Footer -->
+   <footer class="bg-black py-8">
+    <div class="container mx-auto px-4 text-center">
+     <div class="mb-4">
+      <a class="text-neon-green hover:text-electric-blue mx-2" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-neon-green hover:text-electric-blue mx-2" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-neon-green hover:text-electric-blue mx-2" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="text-neon-green hover:text-electric-blue mx-2" href="#">
+       <i class="fab fa-youtube">
+       </i>
+      </a>
+     </div>
+     <p class="text-gray-500">
+      © 2023 Matrix M. All rights reserved.
+     </p>
+    </div>
+   </footer>
+  </div>
+  <script>
+   function toggleMenu() {
+        var menu = document.getElementById('mobile-menu');
+        var hamburger = document.querySelector('.hamburger');
+        menu.classList.add('hidden');
+        menu.classList.remove('slide-down');
+        hamburger.classList.remove('open');
+    }
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        var hamburger = document.querySelector('.hamburger');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('slide-down');
+            hamburger.classList.add('open');
+        } else {
+            menu.classList.add('hidden');
+            menu.classList.remove('slide-down');
+            hamburger.classList.remove('open');
+        }
+    });
+
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        this.classList.toggle('open');
+    });
+
+    window.addEventListener('load', function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        var mainContent = document.getElementById('main-content');
+        setTimeout(function() {
+            loadingScreen.classList.add('fade-out');
+            mainContent.classList.remove('hidden');
+        }, 2000); // Adjust the timeout duration as needed
+    });
+  </script>
+  <style>
+   .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
+ </body>
+  </html>
